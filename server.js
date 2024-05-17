@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 const morgan = require('morgan');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,7 +22,7 @@ app.get('/*', (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/reacthealthtracker',
+  process.env.MONGODB_URI || 'mongodb+srv://binary_amigo:webarebears@cluster0.i1nsxes.mongodb.net/Health',
   { useNewUrlParser: true }
 );
 
